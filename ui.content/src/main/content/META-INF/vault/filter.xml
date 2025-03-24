@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/navy" mode="merge"/>
+    <filter root="/content/navy" mode="merge"/>
+    <filter root="/content/dam/navy/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/navy" mode="merge"/>
+</workspaceFilter>

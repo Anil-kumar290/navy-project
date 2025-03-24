@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/navy",
+        "create path (nt:unstructured) /content/dam/navy/jcr:content",
+        "set properties on /content/dam/navy/jcr:content\n  set cq:conf{String} to /conf/navy\n  set jcr:title{String} to \"NAVY Sites Project\"\nend"
+    ]
+}
