@@ -18,3 +18,21 @@
 </sly>
 
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
+<div data-sly-use.model="com.adobe.aem.guides.navy.core.models.Pagetask">
+  <div>pagetype: ${model.pagetype}</div>
+  <div>producttype: ${model.producttype}</div>
+  <div>enablepersonalization: ${model.enable}</div>
+</div>
+
+<script type="text/javascript">
+  var pageType = "${model.pagetype @context='scriptToken'}";
+  var productType = "${model.producttype @context='attribute'}";
+  var personalization = "${model.enable @context='scriptToken'}";
+  var brandName = "${model.brandName @context='scriptToken'}";
+
+  sessionStorage.setItem("WG_pagetypeData", pageType);
+  sessionStorage.setItem("WG_ProductTypeData", productType); 
+  sessionStorage.setItem("WG_Personalization", personalization);
+  sessionStorage.setItem("WG_BrandName", brandName);
+</script>
+

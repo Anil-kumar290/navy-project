@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="List"
     sling:resourceSuperType="core/wcm/components/list/v3/list"
-    teaserDelegate="navy/components/teaser"
-    componentGroup="NAVY Sites Project - Content"/>
+    componentGroup="NAVY Sites Project - Content"
+    teaserDelegate="navy/components/teaser"/>

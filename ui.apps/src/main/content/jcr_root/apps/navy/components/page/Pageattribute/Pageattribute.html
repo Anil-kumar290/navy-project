@@ -1,0 +1,15 @@
+
+<div data-sly-use.model="com.adobe.aem.guides.navy.core.models.Pagetask"><div>
+<h2>pagetype:${model.pagetype}</h2>
+<h2>producttype:${model.producttype}</h2>
+<h2>enablepersonalization:${model.enable}</h2>
+6.	<script type="text/javascript">
+7.	  var pageType = "${model.pageType @context='scriptToken'}";
+8.	  var productType = "${model.productType @context='scriptToken'}";
+9.	  var personalization = "${model.personalization @context='scriptToken'}";
+10.	  var brandName = "${model.brandName @context='scriptToken'}";
+11.	 sessionStorage.setItem("WG_PageType", pageType);
+12.	 sessionStorage.setItem("WG_ProductType", productType);
+13.	 sessionStorage.setItem("WG_Personlization", personalization);
+14.	 sessionStorage.setItem("WG_BrandName", brandName);
+</script>
