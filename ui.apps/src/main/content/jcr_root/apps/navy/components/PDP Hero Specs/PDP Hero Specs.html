@@ -1,0 +1,20 @@
+<h3>hello</h3>
+<sly data-sly-use.model="com.adobe.aem.guides.navy.core.models.Pdpcfmodel"/>
+
+<div class="product-details">
+    <sly data-sly-test="${model.producttitle}">
+        <h2>${model.producttitle}</h2>
+    </sly>
+
+    <sly data-sly-test="${model.modelnumber}">
+        <p>Model Number: ${model.modelnumber}</p>
+    </sly>
+
+    <sly data-sly-test="${model.heroimage}">
+        <img src="${model.heroimage}" alt="${model.imagealt @ context='attribute'}">
+    </sly>
+
+    <sly data-sly-test="${model.themeselector}">
+        <p>Theme: ${model.themeselector}</p>
+    </sly>
+</div>
