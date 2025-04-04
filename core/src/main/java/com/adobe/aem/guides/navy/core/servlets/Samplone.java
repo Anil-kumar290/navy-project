@@ -1,4 +1,3 @@
-
 package com.adobe.aem.guides.navy.core.servlets;
 
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -15,7 +14,7 @@ import com.google.gson.JsonObject;
         "sling.servlet.paths=/bin/mycustomservlet",
         "sling.servlet.methods=GET"
 })
-public class Sample extends SlingAllMethodsServlet {
+public class Samplone extends SlingAllMethodsServlet {
 
     @Override
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws IOException {
