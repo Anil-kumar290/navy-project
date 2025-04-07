@@ -1,0 +1,10 @@
+<div  data-sly-use.model="com.adobe.aem.guides.navy.core.models.Process">
+    <div  data-sly-list=${model.timelinedetails}>
+			${item.title}
+    </div>
+
+<div data-sly-repeat=${model.finalParams}>
+${item}
+${model.finalParams[item]}
+</div>
+</div>
