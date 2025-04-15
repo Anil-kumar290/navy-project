@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:description="this is a new one"
-    jcr:primaryType="cq:Component"
-    jcr:title="Sampleone"
-    componentGroup="NAVY Sites Project - Content"/>
