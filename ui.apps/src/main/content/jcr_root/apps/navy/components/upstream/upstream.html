@@ -1,0 +1,15 @@
+
+<h3>upstream</h3>
+<div>
+    <p>Text: ${properties['textfield']}</p>
+    <p>Path: ${properties['pathfield']}</p>
+    <p>RichText:</p>
+    <div>${properties['richtext'] @ context='html'}</div>
+</div>
+<ol data-sly-list.node="${resource.children}">
+    <li data-sly-test="${node.name == 'multi'}"
+        data-sly-list.item="${node.children}">
+        ${item.valueMap['address']}
+        ${item.valueMap['number']}
+    </li>
+</ol>
