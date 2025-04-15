@@ -1,10 +1,10 @@
 
 <h3>upstream</h3>
-<div>
-    <p>Text: ${properties['textfield']}</p>
-    <p>Path: ${properties['pathfield']}</p>
+<div data-sly-use.model="com.adobe.aem.guides.navy.core.models.Upstream">
+    <p>Text: ${model['textfield']}</p>
+    <p>Path: ${model['pathfield']}</p>
     <p>RichText:</p>
-    <div>${properties['richtext'] @ context='html'}</div>
+    <div>${model['richtext'] @ context='html'}</div>
 </div>
 <ol data-sly-list.node="${resource.children}">
     <li data-sly-test="${node.name == 'multi'}"
