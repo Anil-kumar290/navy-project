@@ -1,0 +1,8 @@
+<div class="gorest-component">
+    <button id="gorest-fetch-btn">Fetch Users</button>
+    <div id="gorest-users-output"></div>
+</div>
+
+<!-- Include clientlib -->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-call="${clientlib.all @ categories='navy.gorest-users'}"/>
