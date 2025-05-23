@@ -3,3 +3,36 @@
     <h1>${model.title}</h1>
     <p>${model.description}</p>
 </div>
+
+<form id="userForm">
+  <label>Name:</label>
+  <input type="text" name="name" required><br><br>
+
+  <label>Email:</label>
+  <input type="email" name="email" required><br><br>
+
+  <label>Mobile:</label>
+  <input type="text" name="mobile" required><br><br>
+
+  <button type="submit">Submit</button>
+</form>
+
+<div id="responseMsg"></div>
+
+<script>
+  document.getElementById('userForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const params = new URLSearchParams(formData).toString();
+
+    fetch('/bin/userformservlet?' + params)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('responseMsg').innerText = data;
+      })
+      .catch(error => {
+        document.getElementById('responseMsg').innerText = 'Error: ' + error;
+      });
+  });
+</script>
