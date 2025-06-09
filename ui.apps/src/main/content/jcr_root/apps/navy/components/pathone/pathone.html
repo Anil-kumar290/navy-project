@@ -1,0 +1,16 @@
+<h4>Select Pathfield</h4>
+<sly data-sly-use.folderModel="com.adobe.aem.guides.navy.core.models.Pathfieldsrc" />
+
+<div class="pathone">
+    <h3>Selected Folder: ${properties.selectpath}</h3>
+
+    <!-- Main folder list -->
+    <ul data-sly-list.item="${folderModel.children}">
+        <sly data-sly-include="pathone-item.html" data-sly-use.itemContext="${item}" />
+    </ul>
+
+    <!-- Fallback if no children -->
+    <p data-sly-test="${folderModel.children.size == 0}" style="color:red;">
+        No subfolders or assets found at the selected path.
+    </p>
+</div>

@@ -1,0 +1,17 @@
+<li>
+    ${itemContext.name} (${itemContext.type})
+
+    <!-- Render image if image -->
+    <sly data-sly-test="${itemContext.isImage}">
+        <br />
+        <img src="${itemContext.path}" alt="${itemContext.name}" 
+             style="max-width: 200px; margin: 5px 0; border:1px solid #ccc; padding:4px;" />
+    </sly>
+
+    <!-- Render folder children recursively -->
+    <sly data-sly-test="${itemContext.isFolder}">
+        <ul data-sly-list.child="${itemContext.children}">
+            <sly data-sly-include="pathone-item.html" data-sly-use.itemContext="${child}" />
+        </ul>
+    </sly>
+</li>
